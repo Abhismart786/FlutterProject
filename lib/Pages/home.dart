@@ -9,6 +9,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List categories = [
+    "images/headphone_icon.png",
+        "images/lapton.png",
+        "images/tv.png",
+        "images/watch.png",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,18 +33,21 @@ class _HomeState extends State<Home> {
                   children: [
                     Text(
                       "Hey Abhishek",
-                      style: AppWidget.boldTextFieldStyle(), // This now works as long as the class is defined correctly
+                      style: AppWidget
+                          .boldTextFieldStyle(), // This now works as long as the class is defined correctly
                     ),
                     Text(
                       "Good morning",
-                      style: AppWidget.lightTextFeildStyle(), // Ensure this method exists in support_widget.dart
+                      style: AppWidget
+                          .lightTextFeildStyle(), // Ensure this method exists in support_widget.dart
                     ),
                   ],
                 ),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
-                    "images/boy.jpg", // Ensure this image exists in your assets folder
+                    "images/boy.jpg",
+                    // Ensure this image exists in your assets folder
                     height: 70,
                     width: 70,
                     fit: BoxFit.cover,
@@ -60,12 +70,17 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              width: MediaQuery.of(context).size.width,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
               child: TextField(
                 decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: "Search Products",
-                  hintStyle: AppWidget.lightTextFeildStyle(),prefixIcon: Icon(Icons.search,color: Colors.black,) // Ensure this style exists in support_widget.dart
+                    border: InputBorder.none,
+                    hintText: "Search Products",
+                    hintStyle: AppWidget.lightTextFeildStyle(),
+                    prefixIcon: Icon(Icons.search, color: Colors
+                        .black,) // Ensure this style exists in support_widget.dart
                 ),
               ),
             ),
@@ -76,8 +91,21 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Categories", style: AppWidget.semiboldTextFeildStyle()),
-                Text("See all", style: AppWidget.semiboldTextFeildStyle())
+                Text("See all", style: TextStyle(color: Color(0xFFfd6f3e),
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold))
               ],
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 20.0),
+              height: 70,
+              child: ListView.builder(
+                  itemCount: categories.length,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return CategoryTile(image: categories[index]);
+                  }),
             )
           ],
         ),
@@ -85,3 +113,26 @@ class _HomeState extends State<Home> {
     );
   }
 }
+class CategoryTile extends StatelessWidget {
+ String image;
+ CategoryTile({required this.image});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(right: 20.0),
+      decoration: BoxDecoration(
+        color: Colors.white
+      ),
+      height: 90,
+      width: 90,
+      child: Column(children: [
+Image.asset(image,height: 50,width: 50,fit: BoxFit.cover,),
+      ],),
+    );
+  }
+}
+
+
+
+
