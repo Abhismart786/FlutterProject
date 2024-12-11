@@ -69,6 +69,16 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Categories", style: AppWidget.semiboldTextFeildStyle()),
+                Text("See all", style: AppWidget.semiboldTextFeildStyle())
+              ],
+            )
           ],
         ),
       ),
