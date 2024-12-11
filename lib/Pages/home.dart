@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height: 30.0), // Adds space between the texts
             Container(
-              padding: EdgeInsets.only(left: 20.0),
+
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Search Products",
-                  hintStyle: AppWidget.lightTextFeildStyle(), // Ensure this style exists in support_widget.dart
+                  hintStyle: AppWidget.lightTextFeildStyle(),prefixIcon: Icon(Icons.search,color: Colors.black,) // Ensure this style exists in support_widget.dart
                 ),
               ),
             ),
