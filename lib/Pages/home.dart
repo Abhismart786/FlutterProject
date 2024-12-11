@@ -96,18 +96,40 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.bold))
               ],
             ),
+            SizedBox(height: 20.0,),
+            Row(
+              children: [
             Container(
-              margin: EdgeInsets.only(left: 20.0),
-              height: 70,
+              height: 120,
+            padding: EdgeInsets.all(20),
+        margin: EdgeInsets.only(right: 20.0),
+        decoration: BoxDecoration(
+            color: Color(0xFFFD6F3E),borderRadius: BorderRadius.circular(10)
+        ),
+
+        child: Center(child: Text("All",style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),),)
+
+
+
+
+      ),
+                Expanded(
+                  child: Container(
+
+              height: 130,
               child: ListView.builder(
+                padding: EdgeInsets.zero,
                   itemCount: categories.length,
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return CategoryTile(image: categories[index]);
                   }),
-            )
+            ),
+                ),
           ],
+            ),
+        ],
         ),
       ),
     );
@@ -120,14 +142,18 @@ class CategoryTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(20),
       margin: EdgeInsets.only(right: 20.0),
       decoration: BoxDecoration(
-        color: Colors.white
+        color: Colors.white,borderRadius: BorderRadius.circular(10)
       ),
-      height: 90,
-      width: 90,
-      child: Column(children: [
-Image.asset(image,height: 50,width: 50,fit: BoxFit.cover,),
+
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Image.asset(image,height: 50,width: 50,fit: BoxFit.cover,),
+
+        Icon(Icons.arrow_forward)
       ],),
     );
   }
