@@ -129,15 +129,28 @@ class _HomeState extends State<Home> {
                 ),
           ],
             ),
-            SizedBox(height: 30.0,),
+            SizedBox(height: 20.0,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("All Products", style: AppWidget.semiboldTextFeildStyle()),
+                Text("See all", style: TextStyle(color: Color(0xFFfd6f3e),
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold))
+              ],
+            ),
+            SizedBox(height: 20.0,),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              decoration: BoxDecoration(color: Colors.white),
               height: 190,
             child: ListView(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               children: [
                  Column(children:[
-                  Image.asset("images/headphone.PNG",height:60,width:60,fit:BoxFit.cover),
+                  Image.asset("images/headphone2.png",height:120,width:120,fit:BoxFit.cover),
+                   Text("Headphone",style: AppWidget.semiboldTextFeildStyle(),)
                 ],),
               ],
             ),
