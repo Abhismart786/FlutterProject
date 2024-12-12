@@ -129,6 +129,20 @@ class _HomeState extends State<Home> {
                 ),
           ],
             ),
+            SizedBox(height: 30.0,),
+            Container(
+              height: 190,
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: [
+                 Column(children:[
+                  Image.asset("images/headphone.PNG",height:60,width:60,fit:BoxFit.cover),
+                ],),
+              ],
+            ),
+            )
+
         ],
         ),
       ),
