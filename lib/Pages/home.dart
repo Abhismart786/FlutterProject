@@ -135,8 +135,9 @@ class _HomeState extends State<Home> {
             SizedBox(height: 20.0),
             // Placing two images horizontally
             Container(
+
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
               height: 220,
               child: ListView(
                 shrinkWrap: true,
@@ -146,6 +147,7 @@ class _HomeState extends State<Home> {
                     children: [
                       // First headphone image
                       Container(
+                        margin: EdgeInsets.only(right: 20.0),
                         padding: EdgeInsets.symmetric(horizontal: 10.0),
                         decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
                         child: Column(
@@ -169,12 +171,13 @@ class _HomeState extends State<Home> {
                       ),
                       // Second headphone image (next to the first)
                       Container(
+                        margin: EdgeInsets.only(left: 15.0),
                         padding: EdgeInsets.symmetric(horizontal: 10.0),
                         decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Image.asset("images/headphone2.png", height: 120, width: 120, fit: BoxFit.cover),
+                            Image.asset("images/watch.png", height: 120, width: 120, fit: BoxFit.cover),
                             Text("Headphone", style: AppWidget.semiboldTextFeildStyle()),
                             Row(
                               children: [
