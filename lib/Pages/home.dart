@@ -171,17 +171,40 @@ class _HomeState extends State<Home> {
                       ),
                       // Second headphone image (next to the first)
                       Container(
-                        margin: EdgeInsets.only(left: 15.0),
+                        margin: EdgeInsets.only(right: 10.0),
                         padding: EdgeInsets.symmetric(horizontal: 10.0),
                         decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset("images/watch.png", height: 120, width: 120, fit: BoxFit.cover),
-                            Text("Headphone", style: AppWidget.semiboldTextFeildStyle()),
+                            Text("Titan Watch", style: AppWidget.semiboldTextFeildStyle()),
                             Row(
                               children: [
-                                Text("\$100", style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 22.0, fontWeight: FontWeight.bold)),
+                                Text("\$300", style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 22.0, fontWeight: FontWeight.bold)),
+                                SizedBox(width: 40.0),
+                                Container(
+                                  padding: EdgeInsets.all(5),
+                                  decoration: BoxDecoration(color: Color(0xFFfd6f3e), borderRadius: BorderRadius.circular(8)),
+                                  child: Icon(Icons.add, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 15.0),
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),
+                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset("images/Laptop.png", height: 120, width: 120, fit: BoxFit.cover),
+                            Text("Mackbook", style: AppWidget.semiboldTextFeildStyle()),
+                            Row(
+                              children: [
+                                Text("\$1000", style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 22.0, fontWeight: FontWeight.bold)),
                                 SizedBox(width: 40.0),
                                 Container(
                                   padding: EdgeInsets.all(5),
