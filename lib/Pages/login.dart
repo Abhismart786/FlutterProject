@@ -20,8 +20,8 @@ class _LogInState extends State<LogIn> {
           Center(child: Text("Sign In",style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 25))),
           SizedBox(height: 20.0,),
-          Text("   Please enter the details below to \n                      continue",style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 25,color: Colors.grey)),
+          Text("   Please enter the details below to continue",style: TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 20,color: Colors.grey)),
             SizedBox(height: 20.0,),
             Text("    Email",style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 20)),
@@ -51,6 +51,14 @@ class _LogInState extends State<LogIn> {
               ),
               child: Center(child: Text("LOGIN",style: TextStyle(color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),),
             ),),
+            SizedBox(height: 15.0,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account?",style: TextStyle(color: Colors.grey,fontSize: 20.0),),
+                Text("    Sign up",style: TextStyle(color: Colors.green,fontSize: 20.0),)
+              ],
+            )
         ],),
       ),
     );
