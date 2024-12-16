@@ -13,7 +13,7 @@ class _ProductDetailState extends State<ProductDetail> {
     return Scaffold(
       backgroundColor: Color(0xFFfef5f1),
       body: Container(
-        padding: EdgeInsets.only(top: 50.0, left: 20.0),
+        padding: EdgeInsets.only(top: 50.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -22,6 +22,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 Navigator.pop(context);
               },
               child: Container(
+                margin: EdgeInsets.only(left:20.0),
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   border: Border.all(),
@@ -36,7 +37,10 @@ class _ProductDetailState extends State<ProductDetail> {
                 height: 300,
               ),
             ),
-            Container(
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(top:20.0,left:20.0),
+              margin: EdgeInsets.only(top: 20.0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -45,8 +49,9 @@ class _ProductDetailState extends State<ProductDetail> {
                 ),
               ),
               width: MediaQuery.of(context).size.width,
-              child: Text("data"),
+              child: Text("Headphone",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 30)),
             ),
+            )
           ],
         ),
       ),
