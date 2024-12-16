@@ -32,7 +32,7 @@ class _LogInState extends State<LogIn> {
               decoration: InputDecoration(border: InputBorder.none,hintText: "    Email"),
             ),),
 
-            SizedBox(height: 20.0,),
+            SizedBox(height: 15.0,),
             Text("    Password",style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 20)),
             Container(
@@ -41,13 +41,15 @@ class _LogInState extends State<LogIn> {
               child: TextField(
                 decoration: InputDecoration(border: InputBorder.none,hintText: "    Password"),
               ),),
+            SizedBox(height: 20.0,),
             Center(
               child:
             Container(
+              width: MediaQuery.of(context).size.width/2,
               padding: EdgeInsets.all(18),
               decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(10)
               ),
-              child: Text("LOGIN",style: TextStyle(color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),
+              child: Center(child: Text("LOGIN",style: TextStyle(color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),),),
             ),),
         ],),
       ),
