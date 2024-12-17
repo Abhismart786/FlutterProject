@@ -1,18 +1,40 @@
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
+// app/build.gradle
+
+plugins {
+    id("com.android.application")
+    id("com.google.gms.google-services")  // Apply the Firebase plugin here
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.myapp"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 }
 
-rootProject.buildDir = "../build"
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(":app")
-}
+dependencies {
+    // Firebase SDKs
+    implementation 'com.google.gms:google-services:4.4.2'  // Example: Firebase Analytics SDK
 
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    // Add more Firebase dependencies as needed
+    // For example:
+    // implementation 'com.google.firebase:firebase-auth'
+    // implementation 'com.google.firebase:firebase-firestore'
+    // implementation 'com.google.firebase:firebase-messaging' (for Firebase Cloud Messaging)
+
+    // AndroidX dependencies
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
